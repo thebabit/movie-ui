@@ -1,0 +1,24 @@
+
+cách tạo reduce
+b1 
+tạo interface ở index 
+chưa data mình muốn lấy trong state
+sau dó add nó vào combine reduce 
+
+b2 tao reducer cho thứ cần lấy 
+trong reducer phải có initialState ( chưa tất cả default data trong đó )
+sau đó tao function reducer(state = innitialee state, action : any)
+trong reducer function cần có switch ( type*) để chuyển state ( phải return state của cái mình đang làm)
+
+b3 tạo 1 cái action file dể add thông tin vào state của reduce:
+	tao logic để lấy thông tin 
+	sau khi có thông tin dùng:
+			 dispatch( { 
+					type*:..... // reduce sẽ làm gì
+					payload :(dùng dể gừi thông tin di )
+						}) 
+ b4 cuối cùng vào component thay đổi thông tin muốn lấy ở props vào chuyện .state thành .sprops nếu có 
+	nếu muốn add parameter thì phài return void 
+B5 Tạo một container chưa thông tin và map nó 
+
+Chú ý : nếu dùng reduce, khi tạo componen6 ở app.ts ko được auto import vì sẽ sai 

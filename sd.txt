@@ -1,0 +1,4 @@
+trong component , mỗi lần có gì thay dổi sẽ chạy vào action đẻ kiểm tra, component cũng chứa nhung thúc cần để thay doi hình dang ben trong page
+
+
+study

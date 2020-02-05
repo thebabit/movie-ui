@@ -1,0 +1,99 @@
+<div id="app-view">
+
+  <div id="main" class="content">
+
+    <div id="pending">
+      <h1 id="pending-table">Pending Reimbursements</h1>
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th name='reimId'>Reimbursement Id</th>
+            <th name='amount'>Amount</th>
+            <th name='desc'>Description</th>
+            <th name='type'>Type</th>
+            <th name='author'>Author</th>
+            <th name='date'>Submitted Date</th>
+            <!-- Order by Date Submitted-->
+          </tr>
+        </thead>
+        <tbody id = "pending-table-body">
+
+        </tbody>
+      </table>
+    </div>
+
+    <div id="past">
+      <h1 id="past-table">Past Reimbursements</h1>
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th>Reimbursement Id</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Author</th>
+            <th>Submitted Date</th>
+            <th>Status</th>
+            <th>Resolved</th>
+            <th>Resolver</th>
+            <!-- Order by Date Submitted-->
+          </tr>
+        </thead>
+        <tbody id = 'past-table-body'>
+
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#reimbModal">
+        Add Reimbursement
+      </button>
+    </div>
+
+   
+    <!-- The Reimb Modal -->
+    <div class="modal fade" id="reimbModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Reimb Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Add a Reimbursement</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Reimb Modal body -->
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="usr">Reimbursement Amount:</label>
+              <input type="text" class="form-control" id="amount" name="amount">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Reimbursement Description:</label>
+              <textarea class="form-control" rows="5" id="desc"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="sel1">Select Type:</label>
+              <select class="form-control" id="sel1">
+                <option>Lodging</option>
+                <option>Travel</option>
+                <option>Food</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="alert alert-danger" id="alert-msg-incomplete">
+            Please complete all fields!
+        </div>
+            <button type="submit" class="btn btn-warning" id='to-add-reimb'>Submit</button>
+          </div>
+
+          <!-- Login Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
